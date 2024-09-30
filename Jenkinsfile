@@ -11,7 +11,44 @@ pipeline {
             steps {
                 // Run the Job DSL script and point to the groovy file
                 sh 'ls -R'
-                jobDsl targets: 'seed_jobs/seed_job.groovy', removedJobAction: 'IGNORE'
+                // Define the relative path to gitrepos.txt inside the repository
+                    def repoFile = new File("gitrepos.txt")
+                    
+                    // Read the git repository list
+                    def gitRepos = repoFile.readLines()
+                    
+                    gitRepos.each { repoUrl ->
+                    
+                        def repoName = repoUrl.split('/').last().replace('.git', '')
+                    
+                        multibranchPipelineJob(repoName) {
+                            description("Multibranch pipeline for ${repoName}")
+                    
+                            branchSources {
+                                git {
+                                    id(repoName) // Unique identifier for the repository
+                                    remote(repoUrl) // Repository URL
+                                    credentialsId('jenkins_agent_ssh') // SSH credentials ID
+                                    includes('*') // Tracks all branches; modify if necessary
+                                }
+                            }
+                    
+                            orphanedItemStrategy {
+                                discardOldItems {
+                                    daysToKeep(10)
+                                    numToKeep(5)
+                                }
+                            }
+                    
+                            factory {
+                                workflowBranchProjectFactory {
+                                    scriptPath('Jenkinsfile') 
+                                }
+                            }
+                        }
+                    
+                        println "Created multibranch pipeline job for ${repoName}"
+                    }
             }
         }
   
