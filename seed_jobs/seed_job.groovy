@@ -2,7 +2,7 @@
 def repoFile = readFileFromWorkspace('seed_jobs/gitrepos.txt')
 
 // Read the git repository list
-def gitRepos = repoFileContent.split('\n')
+def gitRepos = repoFileContent.readLines()
 
 gitRepos.each { repoUrl ->
 
