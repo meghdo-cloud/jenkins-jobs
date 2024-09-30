@@ -1,8 +1,8 @@
 // Define the relative path to gitrepos.txt inside the repository
-def repoFile = new File("seed_jobs/gitrepos.txt")
+def repoFile = readFileFromWorkspace('seed_jobs/gitrepos.txt')
 
 // Read the git repository list
-def gitRepos = repoFile.readLines()
+def gitRepos = repoFileContent.split('\n')
 
 gitRepos.each { repoUrl ->
 
