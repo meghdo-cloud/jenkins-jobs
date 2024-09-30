@@ -14,12 +14,6 @@ pipeline {
                 jobDsl targets: 'seed_jobs/seed_job.groovy', removedJobAction: 'IGNORE'
             }
         }
-        post {
-          always {
-              script {
-                  cleanWs()
-              }
-          }  
-      }     
+  
     }
 }
