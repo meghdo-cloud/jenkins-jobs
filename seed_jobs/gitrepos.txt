@@ -1,1 +1,1 @@
-https://github.com/meghdo-cloud/drizzle
+git@github.com:meghdo-cloud/drizzle.git
