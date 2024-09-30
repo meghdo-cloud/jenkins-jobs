@@ -10,6 +10,7 @@ pipeline {
         stage('Run Seed Job DSL') {
             steps {
                 // Run the Job DSL script and point to the groovy file
+                sh 'ls -R'
                 jobDsl targets: 'seed_jobs/seed_job.groovy', removedJobAction: 'IGNORE'
             }
         }
