@@ -1,3 +1,4 @@
 git@github.com:meghdo-cloud/drizzle.git
 git@github.com:meghdo-cloud/java17-primer.git
 git@github.com:meghdo-cloud/test1.git
+git@github.com:meghdo-cloud/test.git
