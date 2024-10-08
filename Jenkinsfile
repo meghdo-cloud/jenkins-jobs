@@ -1,5 +1,8 @@
 pipeline {
     agent {   label 'javaagent'    }
+    triggers {
+        githubPush()
+      }
     stages {
         stage('Checkout Seed Script') {
             steps {
