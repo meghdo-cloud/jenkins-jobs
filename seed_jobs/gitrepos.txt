@@ -1,4 +1,3 @@
 git@github.com:meghdo-cloud/java17-primer.git
 git@github.com:meghdo-cloud/liquibase.git
 git@github.com:meghdo-cloud/podyaml.git
-git@github.com:meghdo-cloud/mani_demo.git
