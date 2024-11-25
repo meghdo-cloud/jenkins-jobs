@@ -1,5 +1,5 @@
 pipeline {
-    agent {   label 'javaagent'    }
+    agent {   label 'jnlpagent'    }
     triggers {
         githubPush()
       }
