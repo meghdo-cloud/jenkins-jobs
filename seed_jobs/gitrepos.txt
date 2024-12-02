@@ -1,5 +1,2 @@
 git@github.com:meghdo-cloud/java17-primer.git
 git@github.com:meghdo-cloud/liquibase.git
-git@github.com:meghdo-cloud/offtheshelf.git
-git@github.com:meghdo-cloud/test.git
-git@github.com:meghdo-cloud/breeze.git
