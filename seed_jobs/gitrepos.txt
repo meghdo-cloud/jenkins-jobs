@@ -2,3 +2,4 @@ git@github.com:meghdo-cloud/primer.git
 git@github.com:meghdo-cloud/liquibase.git
 git@github.com:meghdo-cloud/test.git
 git@github.com:meghdo-cloud/demo.git
+git@github.com:meghdo-cloud/breeze.git
