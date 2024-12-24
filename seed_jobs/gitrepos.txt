@@ -1,4 +1,3 @@
 git@github.com:meghdo-cloud/primer.git
 git@github.com:meghdo-cloud/liquibase.git
-git@github.com:meghdo-cloud/drizzlego.git
-git@github.com:meghdo-cloud/breeze.git
+git@github.com:meghdo-cloud/drizzlenodejs.git
